@@ -1,0 +1,51 @@
+<section class="price-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-12 nftmax-main__column">
+                <div class="nftmax-body">
+                    <!-- Dashboard Inner -->
+                    <div class="nftmax-dsinner">
+                        <div class="nftmax-inner__heading mg-btm-20">
+                            <h2 class="nftmax-inner__page-title mb-0">Bảng giá</h2>
+                        </div>
+                        <div class="row nftmax-gap-sq30">
+                            <div *ngFor="let product of products" class="col-xxl-3 col-lg-3 col-md-6 col-12">
+                                <!-- Treadning Single -->
+                                <div class="trending-action__single">
+                                    <!-- Trending Body -->
+                                    <div class="trending-action__body">
+                                        <h2 class="trending-action__title">{{product?.name}}</h2>
+                                        <p class="trending-action__small">{{product?.download_package?.name}}</p>
+                                        <div class="dashboard-banner__bid dashboard-banner__bid-v2">
+                                            <!-- Single Bid -->
+                                            <div class="dashboard-banner__group dashboard-banner__group-v2">
+                                                <p class="dashboard-banner__group-small">Giá</p>
+                                                <h3 class="dashboard-banner__group-title">{{product?.price}}đ</h3>
+                                            </div>
+                                            <!-- End Single Bid -->
+                                            <div class="dashboard-banner__middle-border"></div>
+                                            <!-- Single Bid -->
+                                            <div class="dashboard-banner__group dashboard-banner__group-v2">
+                                                <p class="dashboard-banner__group-small">Lượt tải</p>
+                                                <h3 class="dashboard-banner__group-title" id="CountDown"
+                                                    data-countdown="2023/09/01">{{product?.acceptance_point}}</h3>
+                                            </div>
+                                            <!-- End Single Bid -->
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-banner__button trending-action__bottom">
+                                        <a (click)="clickBuy(product?.id, product?.price)"
+                                            class="nftmax-btn nftmax-btn__secondary radius">Mua</a>
+                                        <a (click)="navigate(product?.id)" class="nftmax-btn trs-white">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                                <!-- End Treadning Single -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Dashboard Inner -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,144 @@
+<section class="nftmax-payment">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-12 nftmax-main__column">
+                <div class="nftmax-body">
+
+                    <div class="nftmax-dsinner">
+                        <div class="nftmax-inner__heading mg-btm-20">
+                            <h2 class="nftmax-inner__page-title mb-0">Chi tiết đơn hàng</h2>
+                        </div>
+                        <div class="row nftmax-gap-sq30" [formGroup]="form">
+                            <div class="order-detail">
+                                <div class="order-detail-wrapper">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="customer-code">
+                                                <p>Mã khách hàng: <span>#{{dataOrder?.customer?.code}}</span></p>
+                                            </div>
+                                            <div class="order-code">
+                                                <p>Mã đơn hàng: <span>#{{dataOrder?.code}}</span></p>
+                                            </div>
+                                            <div class="order-status">
+                                                <p>Tình trạng đơn hàng:
+                                                    <span
+                                                        [style]="convertToVietnameseStatus(dataOrder?.order_status, 'order').color">
+                                                        {{convertToVietnameseStatus(dataOrder?.order_status,
+                                                        'order').text}}</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="customer-name">
+                                                <p>Tên khách hàng: <span>{{dataOrder?.customer?.name}}</span></p>
+                                            </div>
+                                            <div class="customer-time-orders">
+                                                <p>Thời gian mua hàng: <span>{{formattedDate(dataOrder?.date)}}</span>
+                                                </p>
+                                            </div>
+                                            <div class="payment-status">
+                                                <p>Tình trạng thanh toán:
+                                                    <span
+                                                        [style]="convertToVietnameseStatus(dataOrder?.payment_status, 'payment').color">
+                                                        {{convertToVietnameseStatus(dataOrder?.payment_status,
+                                                        'payment').text}}</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-product">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">STT</th>
+                                        <th scope="col" style="width: 30% ;">Tên sản phẩm</th>
+                                        <th scope="col" style="text-align: right;">Số lượng</th>
+                                        <th scope="col" style="text-align: right;">Giá</th>
+                                        <th scope="col" style="text-align: right;">Thành tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr *ngFor="let item of dataOrder?.products; let i = index">
+                                        <th style="text-align: left; padding-left: 18px;" scope="row">{{i + 1}}</th>
+                                        <td>{{item?.name}}</td>
+                                        <td style="text-align: right;">{{item?.pivot?.quantity}}</td>
+                                        <td style="text-align: right;">{{formatNumberWithCommas(item?.pivot?.price)}}đ
+                                        </td>
+                                        <td style="text-align: right;">{{formatNumberWithCommas(item?.pivot?.quantity *
+                                            item?.pivot?.price)}}đ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="order-foot">
+                                <div class="total-temp">
+                                    <p>Tạm tính: </p><span>{{formatNumberWithCommas(totalTemp)}}đ</span>
+                                </div>
+                                <div class="total-temp">
+                                    <p>Số tiền thanh toán:</p> <span>{{formatNumberWithCommas(totalPrimary)}}đ</span>
+                                </div>
+                                <div class="total-temp">
+                                    <p>Bằng chữ:</p> <span>{{convertToVietnameseCurrency(totalPrimary)}}</span>
+                                </div>
+                                <ng-container *ngIf="isShowPayment">
+                                    <div class="payment-method d-flex align-items-center justify-content-between mt-2">
+                                        <p class="m-0">Chọn phương thức thanh toán:</p>
+                                        <span>
+                                            <p-dropdown formControlName="selectedPaymentMethod"
+                                                [options]="nodePaymentMethod" (onChange)="onPaymentMethodSelect($event)"
+                                                optionLabel="name"></p-dropdown></span>
+                                    </div>
+                                    <div *ngIf="isShowPaymentAccount"
+                                        class="payment-account d-flex align-items-center justify-content-between">
+                                        <p class="m-0">Chọn tài khoản thanh toán:</p>
+                                        <span>
+                                            <p-dropdown formControlName="selectedPaymentAccount"
+                                                [options]="nodePaymentAccount"
+                                                (onChange)="onPaymentAccountSelect($event)"
+                                                optionLabel="name"></p-dropdown></span>
+                                    </div>
+                                </ng-container>
+
+                                <ng-container *ngIf="isShowPaymentInfo">
+
+                                    <div
+                                        class="payment-info d-flex align-items-center justify-content-between mt-2 mb-2">
+                                        <span class="m-0">Thông tin thanh toán:</span>
+                                    </div>
+
+                                    <div class="total-temp">
+                                        <p>Ngân hàng:</p> <span>{{paymentInfo?.bank || book_keeping?.bank?.name}}</span>
+                                    </div>
+                                    <div class="total-temp">
+                                        <p>Số tài khoản:</p> <span>{{paymentInfo?.beneficiary_account ||
+                                            book_keeping?.beneficiary_account}}</span>
+                                    </div>
+                                    <div class="total-temp">
+                                        <p>Người thụ hưởng:</p> <span>{{paymentInfo?.beneficiary ||
+                                            book_keeping?.beneficiary}}</span>
+                                    </div>
+                                    <div class="total-temp">
+                                        <p>Số tiền:</p> <span>{{formatNumberWithCommas(totalPrimary)}}đ</span>
+                                    </div>
+                                    <div class="total-temp">
+                                        <p>Nội dung: </p><span>{{dataOrder?.code}}</span>
+                                    </div>
+
+                                    <a *ngIf="isShowPayment && !isShowSubmitConfirmPayment" (click)="onSubmit()"
+                                        style="max-width: 350px; height: 60px; padding: 16px 35px; line-height: normal; font-size: 18px;  align-self: center; margin-top: 30px;"
+                                        class="nftmax__item-button--single nftmax-btn nftmax-btn__bordered bg radius d-flex justify-content-center align-items-center"
+                                        type="submit">XÁC NHẬN ĐÃ THANH TOÁN</a>
+                                </ng-container>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<p-toast></p-toast>

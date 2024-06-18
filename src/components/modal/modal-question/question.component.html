@@ -1,0 +1,43 @@
+<!-- <div class="toolbar">
+  <div class="bar-title primary-bar-title" [ngStyle]="{'color': color}">
+    {{title}}
+  </div>
+</div> -->
+
+
+<section class="order-confirm">
+  <div class="order-confirm-box">
+    <div class="order-confirm-heading">
+      <h1>{{message}}</h1>
+    </div>
+
+    <div class="is-full" *ngIf="data.isInput" style="margin-top: 35px;">
+      <span class="p-float-label">
+        <input pInputText id="username" [(ngModel)]="originAddress" />
+        <label htmlFor="username">Địa chỉ gửi</label>
+      </span>
+    </div>
+
+    <div class="is-full" *ngIf="data.hashId" style="margin-top: 35px;">
+      <span class="p-float-label">
+        <input pInputText id="hashId" [(ngModel)]="hashId" />
+        <label htmlFor="hashId">Hash ID</label>
+      </span>
+    </div>
+
+    <div class="is-full" *ngIf="data.isNumber" style="margin-top: 35px;">
+      <span class="p-float-label">
+        <p-inputNumber id="amount" mode="decimal" locale="en-US" [(ngModel)]="amount"
+          [minFractionDigits]="2"></p-inputNumber>
+        <label htmlFor="amount">Amount</label>
+      </span>
+    </div>
+    <div class="order-confirm-btn">
+      <mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="false" class="cancel">Huỷ</button>
+        <button (click)="submit()" class="confirm">Xác nhận</button>
+      </mat-dialog-actions>
+
+    </div>
+  </div>
+</section>

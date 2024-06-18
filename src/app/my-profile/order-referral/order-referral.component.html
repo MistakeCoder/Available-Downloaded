@@ -1,0 +1,33 @@
+<div class="tab-pane fade show active">
+    <div class="row" style="margin-bottom: 20px;">
+        <div class="col-12">
+            <div class="nftmax-pptabs mg-btm-20">
+                <div class="nftmax-pptabs__form">
+                    <span class="p-input-icon-left">
+                        <i style="color: #495057; right: 100%; transform: translateY(0);" class="fas fa-search"></i>
+                        <input style="padding-left: 35px;" placeholder="Nhập từ khoá tìm kiếm" pInputText
+                            class="search-input" type="text" [(ngModel)]="keyword"
+                            (keyup)="search(keyword); keywordText = keyword;" (keydown.escape)="clearSearch();">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nftmax-table">
+        <div class="nftmax-table__heading">
+            <h3 class="nftmax-table__title mb-0">Danh sách đơn hàng</h3>
+        </div>
+
+        <div class="nftmax-table__main nftmax-table__profile-activity">
+            <app-table (columnClick)="onColumnClick($event)" [columns]="columns" [rows]="rows"> </app-table>
+            <div style="text-align: center; font-size: 18px; transform: translateY(-250px);"
+                class="page-content-overlay" *ngIf="isDataEmpty() && !loading">
+                <h2>Không có dữ liệu</h2>
+            </div>
+        </div>
+        <div class="toolbar">
+            <app-paginate [page]="page" (pageChange)="pageChange($event)"></app-paginate>
+        </div>
+        <!-- End NFTMax Table -->
+    </div>
+</div>

@@ -1,0 +1,1676 @@
+.nftmax__item-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 20px;
+}
+
+.nftmax__item-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.nftmax__item-switch--slide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #878f9a;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.nftmax__item-switch--slide::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 0px;
+    bottom: 1px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.nftmax__item-unlock--first {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nftmax__item-switch input:checked+.nftmax__item-switch--slide {
+    background-color: #27ae60;
+}
+
+.nftmax-ptabs__notify-switch--two input:checked+.nftmax__item-switch--slide {
+    background-color: #27ae60;
+}
+
+.nftmax__item-switch input:focus+.nftmax__item-switch--slide {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+.nftmax__item-switch input:checked+.nftmax__item-switch--slide:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.nftmax__item-switch--round {
+    border-radius: 34px;
+}
+
+.nftmax__item-switch--round:before {
+    border-radius: 50%;
+}
+
+.nftmax__item-button--group {
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+    gap: 16px;
+    align-items: center;
+}
+
+.nftmax__item-button--cancel {
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: #eb5757;
+    border-bottom: 1px solid;
+    border-radius: 0px;
+    padding: 0 !important;
+    line-height: initial;
+    height: initial !important;
+    font-size: 18px;
+}
+
+.nftmax__item-button--single {
+    padding: 14px 22px !important;
+}
+
+.nftmax__item-button--cancel {
+    padding: 0 !important;
+}
+
+.nftmax__file-title {
+    text-align: center;
+    font-size: 26px;
+    margin: 20px 0 0;
+}
+
+.nftmax__file-upload--img {
+    max-width: 70px;
+}
+
+.nftmax__item-heading {
+    margin-bottom: 20px;
+}
+
+.nftmax-preview__modal--close {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border: 2px solid rgba(55, 69, 87, 0.6);
+    border-radius: 100%;
+    font-size: 20px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.modal-header.nftmax__modal__header {
+    border-bottom: 1px solid rgba(83, 86, 251, 0.16);
+    padding: 25px 40px;
+}
+
+.nftmax-preview__modal-content {
+    border-radius: 15px;
+}
+
+.nftmax-preview__modal-title {
+    font-size: 26px;
+}
+
+.nftmax__item-button--single.nftmax__item-button--cancel {
+    font-weight: 400;
+}
+
+button.nftmax-item__btn {
+    min-width: 126px;
+}
+
+.nftmax-modal__body {
+    padding: 30px;
+}
+
+// .nftmax-modal__body .trending-action__single {
+//     max-width: ;
+//     width: ;
+//     max-width: 270px;
+//     margin: 0 auto;
+// }
+
+.modal-content .btn-close {
+    font-size: 15px !important;
+    background: none !important;
+    border: none;
+    opacity: 1;
+}
+
+.nftmax-preview__close {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nftmax-preview__close-img {
+    max-width: 135px;
+    margin-bottom: 28px;
+}
+
+.nftmax-preview__close-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    font-weight: 400;
+    font-family: ProductSansRegular;
+}
+
+.nftmax-close__body {
+    padding: 40px 60px;
+}
+
+.nftmax-preview__modal-content {
+    width: 580px;
+    margin: 0 auto;
+}
+
+.nftmax-close__modal-close {
+    min-width: 460px;
+}
+
+.nftmax-close__modal-close .modal-content {
+    width: 460px !important;
+    margin: 0 auto;
+}
+
+.nftmax-userprofile__user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -110px;
+    margin-bottom: -100px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nftmax-userprofile__thumb {
+    max-width: 205px;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.nftmax-userprofile__thumb img {
+    border-radius: 50%;
+}
+
+.nftmax-userprofile__info-title {
+    font-size: 20px;
+}
+
+.nftmax-userprofile__info-text {
+    line-height: 26px;
+    color: #858d98;
+    padding-right: 80px;
+    letter-spacing: 0.025em;
+    line-height: 1.5rem;
+}
+
+.nftmax-userprofile__info-text a {
+    color: #5356fb;
+    font-weight: 400;
+}
+
+.nftmax-userprofile__right {
+    display: flex;
+    gap: 20px;
+    min-width: 30%;
+    align-items: center;
+    justify-content: right;
+    margin-top: 50px;
+}
+
+.nftmax-userprofile__content {
+    max-width: 480px;
+}
+
+.nftmax-btn.nftmax-btn__share {
+    padding: 0;
+    width: 52px;
+    font-size: 22px;
+    height: 52px;
+    line-height: 52px;
+    border-radius: 100%;
+    background: #fff;
+    color: #374557;
+}
+
+.nftmax-userprofile__meta {
+    display: flex;
+    align-items: center;
+    color: #82829a;
+    gap: 5px;
+    margin-right: 18px;
+    padding-right: 18px;
+    border-right: 1px solid rgba(0, 0, 0, 0.33);
+    font-size: 20px;
+}
+
+.nftmax-userprofile__number {
+    font-weight: 700;
+    color: #374557;
+}
+
+.nftmax-userprofile__meta:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.nftmax-btn.nftmax-btn__profile {
+    padding: 14px 18px;
+    font-size: 1rem;
+    display: inline-block;
+    line-height: 1.5rem;
+}
+
+.nftmax-pcats {
+    margin-top: 10px;
+}
+
+.nftmax-pcats__bar {
+    border-bottom: 1px solid rgba(83, 86, 251, 0.16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: inherit15px;
+}
+
+.nftmax-pcats__list {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+    flex-direction: initial;
+}
+
+.nftmax-pcats__list a {
+    color: #374557;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    line-height: initial;
+    padding: 20px 0;
+}
+
+.nftmax-pcats__count {
+    position: absolute;
+    top: 10px;
+    background: #f1b8fc;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 100%;
+    color: #878f9a;
+    font-weight: 400;
+    right: -18px;
+    transition: all 0.3s ease;
+}
+
+.nftmax-pcats__list a.active .nftmax-pcats__count,
+.nftmax-pcats__list a:hover .nftmax-pcats__count {
+    background: #f539f8;
+    color: #fff;
+}
+
+.nftmax-pcats__list a {
+    letter-spacing: 0.025em;
+}
+
+.nftmax-pcats__list a.active,
+.nftmax-pcats__list a:hover {
+    color: #5356fb;
+    background: transparent;
+}
+
+.nftmax-pcats__list a:before {
+    width: 115%;
+    height: 1px;
+    background: #5356fb;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nftmax-pcats__list a:hover:before,
+.nftmax-pcats__list a.active:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nftmax-personals__list {
+    width: 21.5%;
+}
+
+.nftmax-personals__content {
+    width: 78.5%;
+}
+
+.nftmax-ptabs__stext b {
+    color: #000;
+    font-weight: 400;
+}
+
+.nftmax-ptabs {
+    border-left: 1px solid rgba(83, 86, 251, 0.16);
+    padding-left: 40px;
+}
+
+.nftmax-personals {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 9px 95px rgba(0, 0, 0, 0.05);
+}
+
+.nftmax-personals__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.nftmax-psidebar a {
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #878f9a;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+}
+
+.nftmax-psidebar a:hover {
+    color: #5356fb;
+}
+
+.nftmax-psidebar__icon {
+    width: 32px;
+    position: relative;
+}
+
+.nftmax-psidebar__icon {
+    font-size: 16px;
+}
+
+.nftmax-psidebar a {
+    fill: #858d98;
+}
+
+.nftmax-psidebar a:hover,
+.nftmax-psidebar a.active {
+    color: #5356fb;
+    background: transparent;
+    fill: #5356fb;
+}
+
+.nftmax-psidebar {}
+
+.nftmax-psidebar__list {
+    display: flex;
+    gap: 45px;
+    flex-direction: column;
+}
+
+.nftmax-ptabs__separate {
+    display: flex;
+    gap: 40px;
+}
+
+.nftmax-ptabs__social {
+    border-top: 1px solid #e3e4fe;
+    padding-top: 25px;
+}
+
+.nftmax-ptabs__social-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nftmax-ptabs__social-connect a {
+    margin: 0;
+    color: #33aaf2;
+    font-size: 20px;
+    border-bottom: 1px solid;
+}
+
+.nftmax-ptabs__social-icon {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    display: inline-block;
+    text-align: center;
+    background: #33aaf23d;
+    color: #33aaf2;
+    border-radius: 100%;
+    font-size: 20px;
+}
+
+.nftmax-ptabs__social-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nftmax-ptabs__social-list {
+    margin: 12px 0;
+}
+
+.nftmax-ptabs__verified {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    gap: 40px;
+}
+
+.nftmax-ptabs__verified-button {
+    min-width: 29%;
+}
+
+.nftmax__ptabs-bottom {
+    border-top: 1px solid rgba(83, 86, 251, 0.16);
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.nftmax-btn.nftmax-ptabs__verified-btn {
+    background: #27ae60;
+}
+
+// .nftmax-ptabs__form-main .nftmax__item-input {
+//     display: ;
+//     border: 1px solid #37455717;
+// }
+
+.nftmax-paymentm__name {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nftmax-paymentm__list {
+    padding-top: 30px;
+}
+
+.nftmax-paymentm__manage-btn button {
+    padding: 15px 20px;
+}
+
+.nftmax-paymentm__single {
+    border-bottom: 1px solid rgba(83, 86, 251, 0.16);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nftmax-paymentm__single:last-child {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.nftmax-paymentm__badge {
+    font-size: 18px;
+    margin-top: 10px;
+    display: block;
+}
+
+.nftmax-paymentm__badge.nftmax__ok {
+    color: #27ae60;
+}
+
+.nftmax-paymentm__badge.nftmax__error {
+    color: #eb5757;
+}
+
+.nftmax-paymentm__text {
+    margin: 0;
+    font-size: 18px;
+}
+
+.nftmax-paymentm__title {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.nftmax-paymentm__icon {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    background: #e3e4fe;
+    border-radius: 100%;
+}
+
+.nftmax-paymentm__icon img {
+    max-width: 50px;
+}
+
+.nftmax-paymentm__single.nftmax-paymentm__single--notify {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.nftmax__item-button--group.nftmax__ptabs-bottom.v2 {
+    justify-content: flex-start;
+}
+
+.nftmax__ptabs-bottom.v2 button {
+    padding: 16px 14px;
+    font-size: 18px;
+}
+
+.nftmax-pptabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    gap: 20px;
+}
+
+.nftmax-header__form-profile {
+    width: 510px;
+}
+
+.nftmax-pptabs__main .nftmax-sidebar_btn {
+    font-size: 18px;
+    border: none;
+}
+
+.nftmax-pptabs__main .nftmax-table__product-desc {
+    color: #374557;
+    font-size: 16px;
+}
+
+.nftmax-table__profile-activity .nftmax-table__head tr th,
+.nftmax-table__profile-activity .nftmax-table__body tr td,
+.nftmax-table__profile-activity .nftmax-table__body .nftmax-table__text {
+    text-align: left !important;
+}
+
+.nftmax-table__profile-activity .nftmax-table__body .nftmax-table__amount {
+    justify-content: initial;
+}
+
+.nftmax-table__profile-activity .nftmax-table__column-2 {
+    width: 30%;
+}
+
+.nftmax-table__profile-activity .nftmax-table__column-1 {
+    width: 6%;
+}
+
+.nftmax-table__profile-activity .nftmax-table__column-3,
+.nftmax-table__profile-activity .nftmax-table__column-4,
+.nftmax-table__profile-activity .nftmax-table__column-7 {
+    width: 12%;
+}
+
+.nftmax-table__profile-activity .nftmax-table__column-6 {
+    width: 5%;
+}
+
+.nftmax-table__profile-activity .nftmax-table__column-5 {
+    width: 16%;
+}
+
+.nftmax-collection__single {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 9px 95px rgba(0, 0, 0, 0.05);
+}
+
+.nftmax-collection__head img {
+    border-radius: 12px;
+}
+
+.nftmax-collection__author {
+    margin-top: 15px;
+}
+
+.nftmax-collection__author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nftmax-collection__author-head,
+.nftmax-collection__author-head a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nftmax-collection__item a {
+    color: #374557;
+    font-size: 1.125rem;
+    font-family: "ProductSansRegular";
+    font-weight: 400;
+}
+
+.nftmax-collection__author-head img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nftmax-collection__title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.nftmax-collection__item {}
+
+.nftmax-newtrans__box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 9px 95px rgba(0, 0, 0, 0.05);
+}
+
+.nftmax-newtrans__box.nftmax-newtrans__box__inner {
+    min-height: 343px;
+}
+
+.charts-main__sellh,
+.nftmax-newtrans__box {
+    min-height: 356px !important;
+}
+
+.nftmax-newtrans__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.view-wallet__btn.view-trnsc a {
+    font-size: 14px;
+    border-bottom: 1px solid;
+    line-height: 20px;
+}
+
+.nftmax-newtrans__menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nftmax-newtrans__menu a {
+    padding: 0;
+    margin: 0;
+    background: transparent !important;
+    border: none !important;
+    color: #878f9a;
+    border-bottom: 1px solid transparent !important;
+    border-radius: 0px !important;
+    font-weight: 400;
+}
+
+.nftmax-newtrans__menu .list-group-item {
+    border-radius: none !important;
+}
+
+.nftmax-newtrans__menu .list-group-item.active,
+.nftmax-newtrans__menu .list-group-item:hover {
+    color: #5356fb;
+    border-bottom-color: #5356fb !important;
+}
+
+.nftmax-newtrans__title {
+    margin: 0;
+}
+
+.nftmax-newtrans__single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e3e4fe;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.nftmax-newtrans__single:hover {
+    border-bottom-color: #5356fb;
+}
+
+.nftmax-newtrans__single:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.nftmax-newtrans__info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nftmax-newtrans__added {
+    font-size: 16px;
+    color: #374557;
+}
+
+.nftmax-newtrans__added span {
+    font-weight: 400;
+    display: block;
+    font-size: 14px;
+    color: #878f9a;
+}
+
+.nftmax-newtrans__icon {
+    max-width: 40px;
+}
+
+.nftmax-newtrans__added {
+    margin: 0;
+    font-family: "ProductSansRegular";
+    font-weight: 400;
+}
+
+.nftmax-balance__sub {}
+
+.nftmax-newtrans__amount p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.nftmax-balance__sub .nftmax-newtrans__debit {
+    color: #eb5757;
+}
+
+.view-wallet__btn.top-sell a {
+    color: #5356fb;
+    font-size: 18px;
+}
+
+.nftmax-balance__wallet-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #37455796;
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.nftmax-charts__line {
+    display: flex;
+    justify-content: space-between;
+    color: #f0e9fe;
+}
+
+.nftmax-wallet__one {
+    width: 51.5%;
+}
+
+.nftmax-wallet__two {
+    width: 48.5%;
+}
+
+.nftmax-balance__wallet-box span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nftmax-balance__current {
+    padding: 36px;
+    border-radius: 15px;
+}
+
+.nftmax-balance__all {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 9px 95px rgba(0, 0, 0, 0.05);
+}
+
+.nftmax-sellbox__single {
+    background: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.nftmax-sellbox__heading-title {
+    background: #f2994a;
+    font-size: 20px;
+    padding: 22px 30px;
+    color: #fff;
+    font-weight: 400;
+    font-family: "ProductSansRegular";
+}
+
+.nftmax-balancetop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nftmax-transaction {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: revert;
+    text-align: right;
+}
+
+.nftmax-transaction__title {
+    color: #fff;
+    font-size: 26px;
+    margin: 0;
+}
+
+.nftmax-transaction__text {
+    color: #cbccfe;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    margin-top: 2px;
+}
+
+.nftmax-balance__all .nftmax-balance_list {
+    padding: 0;
+    gap: 25px;
+}
+
+.nftmax-balance__all .nftmax-balance_list li {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.nftmax-balance__wallet-text {
+    margin: 0;
+    color: #cfd0fe;
+    font-size: 18px;
+}
+
+.nftmax-balance__wallet-amount {
+    font-size: 44px;
+    color: #fff;
+    line-height: 52px;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.nftmax-balance__wallet-add {
+    color: #fff;
+    font-size: 18px;
+}
+
+.nftmax-balance__wallet-add span {
+    color: #51bc74;
+}
+
+.nftmax-balance__sub {
+    display: block;
+    font-size: 14px;
+    color: #878f9a;
+    font-weight: 400;
+}
+
+.nftmax-balance__sub span {
+    color: #219653;
+}
+
+.nftmax-progress__single {
+    position: relative;
+    text-align: center;
+}
+
+.nftmax-balance__current,
+.nftmax-balance__all {
+    min-height: 434px;
+}
+
+.nftmax-balance__all .nftmax-balance-desc {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.nftmax-balance__all .nftmax-balance__sub {
+    margin: 5px 0 0;
+}
+
+.nftmax-progress {
+    display: flex;
+    gap: 70px;
+    padding-top: 10px;
+}
+
+.nftmax-progress__single .number {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -18px;
+    left: 50%;
+    margin-left: -18px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.circle {
+    position: relative;
+}
+
+.nftmax-progress__single strong {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.nftmax-paymentm__icon.nftmax-paymentm__icon--notify {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.nftmax-paymentm__icon--notify img {
+    max-width: 22px;
+}
+
+.nftmax-paymentm__text.nftmax-paymentm__text--notify {
+    font-size: 16px;
+    color: #878f9a;
+}
+
+.nftmax-paymentm__title.nftmax-paymentm__title--notify {
+    margin-bottom: 2px;
+}
+
+.nftmax-sellbox__single .nftmax-amount__statics {
+    padding: 8px 28px;
+    margin-bottom: 102px;
+}
+
+.nftmax-sellbox__single .nftmax-amount__statics__title {
+    font-size: 26px;
+}
+
+.nftmax-sellbox__single .nftmax-amount__statics__text {
+    font-size: 18px;
+    color: #878f9a;
+}
+
+.nftmax-amount__statics__text span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.nftmax-amount__statics__debit {
+    color: #eb5757;
+}
+
+.nftmax-amount__statics__credit {
+    color: #27ae60;
+}
+
+.nftmax-sellbox__earning .nftmax-sellbox__heading-title {
+    background: #f539f8;
+}
+
+@media only screen and (min-width: 1279px) and (max-width: 1550px) {
+    .nftmax-progress {
+        gap: 30px;
+    }
+
+    .nftmax-ptabs__verified-button {
+        min-width: 35%;
+    }
+
+    .nftmax__item-input {
+        height: 48px;
+        line-height: 48px;
+    }
+
+    .nftmax-psidebar a {
+        font-size: 14px;
+    }
+
+    .nftmax-psidebar__icon {
+        width: 30px;
+    }
+
+    .nftmax-psidebar__list {
+        gap: 30px;
+    }
+
+    .nftmax-newtrans__box,
+    .charts-main__invest {
+        min-height: 395px;
+    }
+
+    .nftmax-sellbox__heading-title {
+        padding: 22px 22px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1278px) {
+    .nftmax-pcats__list li a {
+        font-size: 16px;
+    }
+
+    .nftmax-pcats__list {
+        gap: 25px;
+    }
+
+    .nftmax-pcats__list li a::before {
+        bottom: -24px;
+    }
+
+    .nftmax-psidebar a {
+        flex-direction: column;
+    }
+
+    .nftmax-psidebar__list {
+        gap: 15px;
+    }
+
+    .nftmax-psidebar__icon {
+        width: auto;
+    }
+
+    .nftmax-psidebar__title {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .nftmax-ptabs__verified-button {
+        min-width: 35%;
+    }
+
+    .nftmax-btn.nftmax-ptabs__verified-btn {
+        font-size: 14px;
+    }
+
+    .nftmax-wallet__one,
+    .nftmax-wallet__two {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1278px) {
+    .nftmax-userprofile__user {
+        flex-direction: column;
+        align-items: start;
+        gap: 25px;
+    }
+
+    .nftmax-userprofile__right {
+        align-items: start;
+        justify-content: initial;
+    }
+
+    .nftmax-pcats__list a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nftmax-progress {
+        display: flex;
+        gap: 25px;
+        padding-top: 10px;
+    }
+
+    .nftmax-pcats__list {
+        margin-left: -15px;
+        margin-top: -15px;
+        display: block;
+    }
+
+    .nftmax-pcats__list a {
+        margin-left: 15px;
+        display: inline-block;
+        padding: 10px 5px;
+    }
+
+    .nftmax-pcats__list a:before {
+        bottom: 0;
+    }
+
+    .nftmax-header__form-profile {
+        width: 100%;
+    }
+
+    .nftmax-userprofile__user {
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .nftmax-pcats {
+        margin-top: 30px;
+    }
+
+    .nftmax-pcats__list li a {
+        font-size: 16px;
+    }
+
+    .nftmax-userprofile__thumb {
+        max-width: 115px;
+        margin-bottom: 15px;
+    }
+
+    .nftmax-userprofile__user {
+        top: -60px;
+        margin-bottom: -60px;
+        align-items: start;
+    }
+
+    .nftmax-userprofile__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nftmax-userprofile__info-text {
+        padding-right: 0;
+    }
+
+    .nftmax-psidebar__title {
+        display: none;
+    }
+
+    .nftmax-ptabs__verified {
+        flex-direction: column;
+    }
+
+    .nftmax-ptabs__sidebar {
+        margin-top: 30px;
+    }
+
+    .nftmax-paymentm__icon {}
+
+    .nftmax-paymentm__single {
+        flex-direction: column;
+    }
+
+    .nftmax-paymentm__manage-btn {
+        margin-top: 20px;
+    }
+
+    .nftmax-paymentm__icon {
+        min-width: 80px;
+        min-height: 80px;
+        line-height: 80px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .nftmax-paymentm__icon img {
+        max-width: 35px;
+    }
+
+    .nftmax-paymentm__single {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .nftmax__item-form--group .nftmax__item-form--group {
+        margin-top: 20px;
+    }
+
+    .nftmax-personals__history {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .nftmax-personals__history #nftmax-table__main {
+        width: 600px;
+    }
+
+    .nftmax-password__img {
+        margin-top: 30px;
+    }
+
+    .nftmax-psidebar__list {
+        gap: 25px;
+    }
+
+    .nftmax-userprofile__meta {
+        margin-right: 12px;
+        padding-right: 12px;
+        font-size: 16px;
+    }
+
+    .nftmax-personals__list {
+        width: 12.5%;
+    }
+
+    .nftmax-personals__content {
+        width: 87.5%;
+    }
+
+    .nftmax-ptabs__separate {
+        flex-direction: column;
+    }
+
+    .nftmax-paymentm__name {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nftmax-wallet__one,
+    .nftmax-wallet__two {
+        width: 100%;
+    }
+}
+
+.ntfmax__bgc--1 {
+    background: linear-gradient(134.38deg,
+            #f539f8 0%,
+            #c342f9 43.55%,
+            #5356fb 104.51%);
+}
+
+.ntfmax__bgc--2 {
+    background: #5356fb;
+}
+
+.ntfmax__bgc--3 {
+    background: #f539f8;
+}
+
+.ntfmax__bgc--4 {
+    background: #56ccf2;
+}
+
+.ntfmax__bgc--5 {
+    background: #9b51e0;
+}
+
+.ntfmax__bgc--6 {
+    background: #219653;
+}
+
+.ntfmax__bgc--7 {
+    background: #eb5757;
+}
+
+.nftmax-table__status__group {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nftmax-table__trash a {
+    color: #878f9a;
+}
+
+.nftmax-table__trash a:hover {
+    color: #eb5757;
+}
+
+.nftmax-password__img {
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.nftmax-accordion__single button::after {
+    left: 0;
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: auto;
+}
+
+.nftmax-accordion__single .accordion-button::after {
+    content: "+";
+    background: none;
+    color: #5356fb;
+    font-size: 20px;
+}
+
+.nftmax-accordion__single .accordion-button:not(.collapsed) {
+    color: #0c63e4;
+    background-color: #e7f1ff;
+    box-shadow: inset 0 -1px 0 rgba(83, 86, 251, 0.16);
+}
+
+.nftmax-accordion__single .accordion-button:not(.collapsed)::after {
+    content: "-";
+}
+
+.accordion-button.nftmax-accordion__heading {
+    background: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 22px 22px;
+    color: #374557;
+}
+
+.nftmax-accordion__single .accordion-button:not(.collapsed) {
+    color: initial;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#nftmax-accordion {
+    position: relative;
+    top: -22px;
+    margin-bottom: -22px;
+}
+
+.accordion-body.nftmax-accordion__body {
+    font-size: 16px;
+    color: #878f9a;
+    border-left: 4px solid #5356fb;
+    padding: 0 20px;
+    margin: 25px 40px;
+}
+
+.accordion-flush .accordion-item:last-child {
+    border: inherit;
+}
+
+.accordion-item.nftmax-accordion__single {
+    border: none !important;
+}
+
+.accordion-item.nftmax-accordion__single .accordion-header {
+    border-bottom: 1px solid #e3e4fe;
+}
+
+blockquote {
+    background: #5356fb;
+    padding: 25px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.nftmax-ptabs__page p {
+    margin-bottom: 30px;
+}
+
+.nftmax-ptabs__page p:last-child {
+    margin: 0;
+}
+
+.nftmax-ptabs__sauthor {
+    position: relative;
+}
+
+.nftmax-ptabs__sedit {
+    position: absolute;
+    bottom: 50px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 100%;
+    color: #fff;
+    right: 8px;
+    background: #374557;
+    cursor: pointer;
+}
+
+.nftmax-ptabs__sedit:hover {
+    background: #f539f8;
+    color: #fff;
+}
+
+.nftmax-ptabs__stitle {
+    font-size: 20px;
+    margin: 0 0 10px;
+    letter-spacing: 0.025em;
+}
+
+.nftmax-ptabs__stext b {
+    color: #374557;
+}
+
+.nftmax-ptabs__stext {
+    line-height: 1.5rem;
+}
+
+.nftmax-ptabs__stitle i {
+    color: #878f9a;
+}
+
+.nftmax-ptabs__scover .nftmax-ptabs__pthumb {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+}
+
+.nftmax-ptabs__ssingle.nftmax-ptabs__scover .nftmax-ptabs__sedit {
+    bottom: 10px;
+    right: 15px;
+}
+
+.nftmax-personals__history .nftmax-table__column-6 {
+    width: 1% !important;
+}
+
+.nftmax-personals__history .nftmax-table__body tr td {
+    padding: 15px 0;
+}
+
+.nftmax-personals__history .nftmax-table__product-desc {
+    color: #374557;
+    font-size: 16px;
+}
+
+.nftmax-personals__history .nftmax-table__column-5 {
+    width: 10% !important;
+}
+
+.nftmax-personals__history .nftmax-table__column-1 {
+    width: 10%;
+}
+
+.nftmax-personals__history .nftmax-table__body tr td {
+    padding: 13px 0;
+}
+
+.nftmax__item-button--group--profile {
+    justify-content: center;
+}
+
+.nftmax__item-button--group--profile button {
+    font-size: 18px;
+}
+
+.nftmax__item-button--group--profile .nftmax__item-button--cancel {
+    font-weight: 400;
+}
+
+.nftmax-ptabs__form-update {
+    width: 232px !important;
+    min-width: 232px;
+}
+
+.nftmax-ptabs__stitle--update {}
+
+.nftmax-ptabs__ssingle {
+    margin-bottom: 25px;
+}
+
+.nftmax-ptabs__ssingle:last-child {
+    margin: 0;
+}
+
+.nftmax-ptabs__sedit.nftmax-ptabs__cedit {
+    background: #374557;
+    bottom: -16px;
+    right: 10px;
+}
+
+.nftmax-ptabs__sauthor {
+    display: flex;
+    flex-direction: column;
+}
+
+.nftmax-ptabs__sauthor-img {}
+
+.nftmax-ptabs__pthumb {
+    max-width: 200px;
+    position: relative;
+}
+
+.nftmax-ptabs__pthumb input {
+    display: none;
+}
+
+.nftmax-ptabs__scover img {
+    width: 100%;
+}
+
+.nftmax-userprofile__meta a {
+    color: #82829a;
+    font-weight: 400;
+}
+
+.followers-list__single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.followers-list__first {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.followers-list__title {
+    margin: 0;
+}
+
+.followers-list__badge {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    max-width: 18px;
+}
+
+.followers-list__follower {
+    position: relative;
+}
+
+.followers-list__follower {
+    width: 60px;
+}
+
+.followers-list__text {
+    margin: 0;
+}
+
+.followers-list__button a {
+    padding: 13px 30px;
+}
+
+.followers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.followers-list__button a {
+    width: 115px;
+    text-align: center;
+    padding: 13px 10px;
+
+}
+
+// .nftmax-btn.nftmax-btn__bordered.nftmax-btn__followed:before {
+//     display: ;
+//     opacity: 0;
+//     visibility: hidden;
+//     background: ;
+// }
+
+.nftmax-btn.nftmax-btn__bordered.nftmax-btn__followed::after {
+    background: linear-gradient(134.38deg,
+            #f539f8 0%,
+            #c342f9 43.55%,
+            #5356fb 104.51%);
+    opacity: 0.17;
+    border-radius: 61px !important;
+}
+
+.nftmax-followers__modal .modal-content {
+    width: 400px !important;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .nftmax-followers__modal .modal-content,
+    .modal-content,
+    .nftmax-close__modal-close .modal-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: inherit;
+        margin-left: initial;
+    }
+}

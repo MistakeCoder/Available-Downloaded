@@ -1,0 +1,59 @@
+<section *ngIf="!isVerifySuccess" class="verify">
+    <div class="container">
+        <div class="verify-wrapper">
+            <form class="verify-box" [formGroup]="verifyPhonenumberForm">
+                <div class="verify-heading">
+                    <h1>Nhập mã xác minh được gửi vào email của bạn!</h1>
+                </div>
+                <div class="verify-desc">
+                    <p>Chúng tôi đã gửi cho bạn mã gồm sáu chữ số qua email tới <span>{{tempEmail}}</span>, hãy nhập mã
+                        đó vào bên dưới:</p>
+                </div>
+                <div class="verify-input">
+                    <input type="text" formControlName="code1" maxlength="1" id="code1" (input)="moveFocus(1)"
+                        (change)="progressCode()" (keyup)="handleBackspace($event, 1)" />
+                    <input type="text" formControlName="code2" maxlength="1" id="code2" (input)="moveFocus(2)"
+                        (change)="progressCode()" (keyup)="handleBackspace($event, 2)" />
+                    <input type="text" formControlName="code3" maxlength="1" id="code3" (input)="moveFocus(3)"
+                        (change)="progressCode()" (keyup)="handleBackspace($event, 3)" />
+                    <input type="text" formControlName="code4" maxlength="1" id="code4" (input)="moveFocus(4)"
+                        (change)="progressCode()" (keyup)="handleBackspace($event, 4)" />
+                    <input type="text" formControlName="code5" maxlength="1" id="code5" (input)="moveFocus(5)"
+                        (change)="progressCode()" (keyup)="handleBackspace($event, 5)" />
+                    <input type="text" formControlName="code6" maxlength="1" id="code6" (input)="moveFocus(6)"
+                        (change)="progressCode()" (keyup)="handleBackspace($event, 6)" />
+                </div>
+                <div class="verify-button" style="cursor: pointer;">
+                    <button [disabled]="verifyPhonenumberForm.invalid" (click)="onSubmit()">Xác minh</button>
+                </div>
+                <div class="verify-detail">
+                    <p>Nếu bạn không nhận được mã xác minh <span
+                            style="cursor: pointer; font-weight: bold; color: #5356FB; padding-left: 8px;"> GỬI
+                            LẠI</span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="isVerifySuccess" class="verify-success">
+    <div class="container">
+        <div class="verify-wrapper">
+            <div class="verify-box">
+                <div class="verify-heading">
+                    <h1>Thành công!
+                        <br> Bạn đã xác minh thành công!
+                    </h1>
+                </div>
+                <div class="verify-desc">
+                    <p>Tự động chuyển đến trang đăng nhập sau <span class="countdown-time">{{countdownTime}} giây</span>
+                        <span style="cursor: pointer; font-weight: bold; color: #5356FB; padding-left: 8px;"
+                            (click)="navigate('/login')">Đăng nhập</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<p-toast></p-toast>

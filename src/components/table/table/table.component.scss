@@ -1,0 +1,149 @@
+:host {
+  width: 100%;
+  position: relative;
+
+}
+
+table {
+  min-width: 100%;
+
+
+  th,
+  td {
+    //border-width: 0 0 1px;
+    //vertical-align: inherit !important;
+    //cursor: pointer !important;
+  }
+}
+
+.actions {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 16px;
+  position: absolute;
+  left: 0;
+  top: -45px;
+  width: calc(79vw - 111px);
+  z-index: 102;
+
+  .mat-badge {
+    margin-right: 35px;
+    font-size: 1em;
+    padding: 0 7px;
+  }
+
+  .action-item {
+    margin: 0 12px;
+    border: 1px solid #e3e4fe;
+    height: 30px;
+    background: transparent;
+
+    span {
+      margin-left: 4px;
+      font-family: "ProductSansRegular";
+      font-weight: 500;
+      line-height: 26px;
+      color: #374557;
+      font-size: 0.9em;
+    }
+
+    :last-child {
+      margin-right: 0px;
+    }
+  }
+
+  .action-edit {
+    background: #e3e4fe;
+
+    span {
+      color: #5356fb;
+    }
+  }
+
+  .action-trash,
+  .action-destroy {
+    background: #fdefef;
+
+    span {
+      color: #dc3545;
+    }
+  }
+
+  .action-restore {
+    background: #def9e9;
+
+    span {
+      color: #27ae60;
+    }
+  }
+}
+
+tr.mat-mdc-row {
+  &:hover {
+    background-color: #F9F9F9;
+  }
+}
+
+th.cdk-header-cell {
+  background-color: #f6f6f6;
+  font-size: 16px;
+  font-weight: bold !important;
+  color: #374557 !important;
+
+  .mat-sort-header-button {
+
+    font-weight: bold !important;
+    color: black !important;
+  }
+}
+
+td.mat-mdc-cell {
+  color: #3c3b3b !important;
+  font-size: 14px !important;
+
+  //border: 1px solid #f3f3f3;
+  .row-action {
+    i {
+      transition: 0.3s;
+
+      &:hover {
+        color: #28A69B !important;
+      }
+    }
+  }
+}
+
+tr.mat-mdc-header-row {
+  height: 46px; // background-color: #DEE1E6;
+}
+
+.is-action-edit {
+  color: #5356fb;
+}
+
+.is-action-trash {
+  color: #dc3545;
+}
+
+.fa-lock {
+  color: green;
+}
+
+.fa-lock-open {
+  color: red;
+}
+
+.icon {
+  height: 1rem !important;
+  width: 1rem !important;
+}
+
+.button-holder {
+  height: 100%;
+}
+
+.mdc-data-table__content {
+  overflow-y: auto;
+}

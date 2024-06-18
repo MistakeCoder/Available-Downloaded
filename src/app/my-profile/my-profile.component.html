@@ -1,0 +1,73 @@
+<section class="nftmax-my-profile" style="margin-bottom: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 nftmax-main__column">
+                <div class="nftmax-body">
+                    <!-- Dashboard Inner -->
+                    <div class="nftmax-dsinner">
+
+                        <!-- NFTMax User Profile -->
+                        <div class="nftmax-userprofile mg-top-40">
+                            <div class="nftmax-userprofile__header">
+                                <img src="../../assets/img/profile-cover.png" alt="#">
+                            </div>
+                            <div class="nftmax-userprofile__user">
+                                <div class="nftmax-userprofile__content">
+                                    <div class="nftmax-userprofile__thumb">
+                                        <img src="../../assets/img/profile-thumb.png" alt="#">
+                                    </div>
+                                    <div class="nftmax-userprofile__info">
+                                        <h4 class="nftmax-userprofile__info-title"></h4>
+                                        <p class="nftmax-userprofile__info-text"><a href="#"></a></p>
+                                    </div>
+                                </div>
+                                <div class="nftmax-userprofile__right">
+                                    <a (click)="navigateTo('setting', 'setting', 'personal-info')"
+                                        class="nftmax-btn nftmax-btn__primary nftmax-btn__profile radius">Sửa
+                                        thông tin</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nftmax-pcats">
+
+                            <!-- Profile Menu -->
+                            <div class="nftmax-pcats__bar">
+                                <div class="nftmax-pcats__list list-group">
+                                    <a (click)="setActiveTab('order')" [class.active]="activeTab === 'order'"
+                                        class="list-group-item ">Đơn hàng<span
+                                            class="nftmax-pcats__count">{{countOrder}}</span></a>
+                                    <a (click)="setActiveTab('order-referral')"
+                                        [class.active]="activeTab === 'order-referral'" class="list-group-item">Đơn hàng
+                                        giới thiệu<span class="nftmax-pcats__count">{{countOrderReferral}}</span></a>
+                                    <a (click)="setActiveTab('reward-point')"
+                                        [class.active]="activeTab === 'reward-point'" class="list-group-item">Tích
+                                        điểm</a>
+                                    <a (click)="setActiveTab('wallet-ticket')"
+                                        [class.active]="activeTab === 'wallet-ticket'" class="list-group-item">Rút
+                                        điểm</a>
+                                    <a (click)="setActiveTab('download-point')"
+                                        [class.active]="activeTab === 'download-point'" class="list-group-item">Lượt
+                                        tải</a>
+                                </div>
+
+                            </div>
+                            <!-- End Profile Menu -->
+
+                            <div class="tab-content">
+                                <app-order *ngIf="activeTab === 'order'"></app-order>
+                                <app-order-referral *ngIf="activeTab === 'order-referral'"></app-order-referral>
+                                <app-reward-point *ngIf="activeTab === 'reward-point'"></app-reward-point>
+                                <app-wallet-ticket *ngIf="activeTab === 'wallet-ticket'"></app-wallet-ticket>
+                                <app-download-point *ngIf="activeTab === 'download-point'"></app-download-point>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

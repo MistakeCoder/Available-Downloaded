@@ -1,0 +1,38 @@
+<div *ngIf="!activeTab" class="tab-pane fade show" id="id2" role="tabpanel">
+    <form action="#">
+        <div class="nftmax-paymentm">
+            <ul class="nftmax-paymentm__list">
+
+                <li *ngFor="let account of paymentMethodList" class="nftmax-paymentm__single">
+                    <div class="nftmax-paymentm__name">
+                        <div class="nftmax-paymentm__icon">
+                            <img *ngIf="account?.type === 'bank'" src="../../../assets/img/payment-1.png" alt="#">
+                            <img *ngIf="account?.type === 'card'" src="../../../assets/img/atm-card.png" alt="#">
+                        </div>
+                        <div class="nftmax-paymentm__content">
+                            <h4 class="nftmax-paymentm__title">{{account?.bank?.name}}</h4>
+                            <p class="nftmax-paymentm__text">{{transform(account?.beneficiary_account)}}</p>
+                            <p class="nftmax-paymentm__text">{{account?.beneficiary}}</p>
+                            <span class="nftmax-paymentm__badge nftmax__ok">
+                                <i [style.color]="account?.is_default ? '#27ae60' : 'darkgrey'"
+                                    class="fas fa-check-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="nftmax-paymentm__manage-btn">
+                        <button (click)="setActiveTab('edit', account?.id)"
+                            class="nftmax-btn nftmax-btn__bordered bg radius">Sửa</button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="nftmax__item-button--group nftmax__ptabs-bottom v2 d-flex align-content-center gap-3">
+            <button (click)="setActiveTab('bank')" class="nftmax-btn nftmax-primary radius">Thêm tài khoản ngân
+                hàng</button>
+            <button (click)="setActiveTab('card')" class="nftmax-btn nftmax-gbcolor radius" type="submit">Thêm tài khoản
+                thẻ</button>
+        </div>
+    </form>
+</div>
+<app-edit-payment-method (activeTab)="recieveData($event)" *ngIf="activeTab"></app-edit-payment-method>
+<p-toast></p-toast>

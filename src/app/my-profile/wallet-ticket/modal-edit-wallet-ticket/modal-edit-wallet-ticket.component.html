@@ -1,0 +1,67 @@
+<form [formGroup]="form" class="modal-page">
+    <div class="toolbar">
+        <div class="bar-title primary-bar-title">
+            {{title}}
+        </div>
+    </div>
+    <mat-dialog-content>
+        <ng-container *ngIf="!isChangeStatus">
+
+            <div class="is-full" style="padding: 0 0 30px;">
+                <span class="p-float-label">
+                    <p-autoComplete formControlName="selected_customer_account" [dropdown]="true"
+                        [suggestions]="filteredCustomerAccount" (completeMethod)="filterCustomerAccount($event)"
+                        (onSelect)="onCustomerAccountSelect($event)" field="beneficiary"></p-autoComplete>
+                    <label for="float-input">Tài khoản khách hàng</label>
+                </span>
+            </div>
+
+            <div class="is-full" style="padding: 0 0 30px;">
+                <span class="p-float-label">
+                    <p-autoComplete formControlName="bank_name" [dropdown]="true" [suggestions]="filteredBanks"
+                        (completeMethod)="filterBanks($event)" (onSelect)="onBankSelect($event)"
+                        field="name"></p-autoComplete>
+                    <label for="float-input">Tên ngân hàng</label>
+                </span>
+            </div>
+
+            <div class="is-full" style="padding: 0 0 30px;">
+                <span class="p-float-label">
+                    <input pInputText id="name" formControlName="beneficiary_account" />
+                    <label for="float-input">Số tài khoản</label>
+                </span>
+            </div>
+
+            <div class="is-full" style="padding: 0 0 30px;">
+                <span class="p-float-label">
+                    <input pInputText id="name" formControlName="beneficiary" />
+                    <label for="float-input">Người thụ hưởng</label>
+                </span>
+            </div>
+
+            <div class="is-full" style="padding: 0 0 30px;">
+                <span class="p-float-label">
+                    <input pInputText id="name" formControlName="amount" />
+                    <label for="float-input">Số điểm</label>
+                </span>
+            </div>
+
+            <div class="is-full" style="padding: 0 0 30px;">
+                <span class="p-float-label">
+                    <textarea id="float-input" rows="7" cols="30" pInputTextarea formControlName="note"></textarea>
+                    <label for="float-input">Ghi chú</label>
+                </span>
+            </div>
+        </ng-container>
+
+    </mat-dialog-content>
+
+    <mat-dialog-actions style="margin-top: 10px; display: flex; align-items: center; gap: 12px;">
+        <p-button label="ĐÓNG" size="small" styleClass="secondary" severity="secondary"
+            (onClick)="close(false)"></p-button>
+        <p-button label="LƯU LẠI" size="small" class="btn-save" [loading]="loading" (onClick)="submit()"
+            [disabled]="form.invalid"></p-button>
+    </mat-dialog-actions>
+
+</form>
+<p-toast></p-toast>

@@ -1,0 +1,410 @@
+.body-bg {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .nftmax-wc__full {
+        position: relative;
+        height: 100%;
+
+        .container-fluid {
+            padding: 0;
+
+            .row {
+                .nftmax-wc__inner {
+                    padding: 66px;
+                    height: 100vh !important;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background: linear-gradient(134.38deg, #F539F8 0%, #C342F9 43.55%, #5356FB 104.51%);
+
+                    .nftmax-wc__logo {
+                        img {
+                            max-width: 235px;
+                        }
+                    }
+
+                    .nftmax-wc__middle {
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            max-width: 655px;
+                        }
+                    }
+
+                    .nftmax-wc__heading {
+                        .nftmax-wc__title {
+                            font-size: 60px;
+                            line-height: 74px;
+                            margin: 0px 0 0;
+                            color: #fff;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .nftmax-wc__form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    background: #fff;
+
+                    .nftmax-wc__form-inner {
+
+                        padding: 125px 138px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        border-radius: 5px;
+                        min-width: 825px;
+                        max-width: 825px;
+                        min-height: 820px;
+
+                        .nftmax-wc__heading {
+                            .nftmax-wc__form-title {
+                                font-size: 54px;
+                                line-height: 60px;
+                                text-align: center;
+                                background-repeat: no-repeat;
+                                width: auto;
+                                margin: 0;
+                                background-position: bottom;
+                                padding-bottom: 25px;
+                                margin-bottom: 25px;
+                                background-size: auto;
+                            }
+                        }
+
+                        .nftmax-wc__form-main {
+                            .form-group {
+                                margin-top: 20px;
+                                position: relative;
+
+                                .nftmax-wc__icon {
+                                    position: absolute;
+                                    right: 29px;
+                                    top: 50%;
+                                    color: #85878b;
+                                    transition: all 0.3s ease;
+                                    cursor: pointer;
+                                    line-height: initial;
+                                    margin-top: -12px;
+                                }
+
+                                .nftmax-wc__form-label {
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    margin-bottom: 10px;
+                                    line-height: 26px;
+                                    color: #374557;
+                                }
+
+                                .form-group__input {
+                                    position: relative;
+
+                                    input {
+                                        width: 100%;
+                                        height: 58px;
+                                        padding: 5px 50px 5px 28px;
+                                        background: #FAFAFA;
+                                        border: 1.5px solid rgba(83, 86, 251, 0.1882352941);
+                                        color: #655f5f;
+                                        border-radius: 30px;
+                                        outline: none;
+
+                                        &:focus {
+                                            border-color: #5356FB;
+                                            transition: all 0.4s;
+                                        }
+                                    }
+                                }
+
+                                .nftmax-wc__check-inline {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+
+                                    .nftmax-wc__checkbox {
+                                        input {
+                                            width: auto !important;
+                                            height: initial !important;
+                                        }
+
+                                        label {
+                                            margin: 0;
+                                            margin-left: 5px;
+                                            font-weight: 400;
+                                            font-size: 16px;
+                                            line-height: 26px;
+                                            color: #374557;
+
+                                            a {
+                                                font-weight: 400;
+                                                text-decoration: none;
+                                                color: #5356FB;
+                                            }
+                                        }
+                                    }
+
+                                    .nftmax-wc__forgot {
+                                        .forgot-pass {
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            text-decoration: none;
+                                            color: #5356FB;
+                                        }
+                                    }
+                                }
+
+                                .nftmax-wc__button {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 25px;
+
+                                    .ntfmax-wc__btn {
+                                        padding: 15px;
+                                        background: #5356FB;
+                                        color: #fff;
+                                        border: none;
+                                        border-radius: 50px;
+                                        height: 58px;
+                                        font-size: 18px;
+                                        font-weight: 700;
+
+                                        &:hover {
+                                            background: #F539F8;
+                                            transition: all 0.4s ease-in-out;
+                                        }
+                                    }
+                                }
+
+                                .nftmax-wc__bottom {
+                                    text-align: center;
+
+                                    .nftmax-wc__text {
+                                        font-size: 18px;
+                                        color: #878F9A;
+                                        margin: 0;
+
+                                        a {
+                                            color: #374557;
+                                            font-weight: 400;
+                                            text-decoration: none;
+
+                                            &:hover {
+                                                color: #5356FB;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1279px) and (max-width: 1550px) {
+
+    .body-bg {
+        .nftmax-wc__full {
+            .container-fluid {
+                .nftmax-wc__form {
+                    .nftmax-wc__form-inner {
+                        padding: 70px 85px !important;
+                        min-width: 650px !important;
+                        max-width: 650px !important;
+                        min-height: 700px !important;
+                        max-height: 700px;
+
+                        &.nftmax-wc__form-new {
+                            min-height: 750px;
+                            max-height: 750px;
+                        }
+
+                        .nftmax-wc__form-main {
+                            .form-group {
+
+                                input {
+                                    height: 54px;
+                                }
+
+                                &.nftmax-wc__new-bottom {
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+
+                        .nftmax-wc__heading {
+                            .nftmax-wc__form-title {
+                                font-size: 34px;
+                                line-height: 50px;
+                                padding-bottom: 15px;
+                                margin-bottom: 5px;
+                                background-size: 60%;
+                                font-weight: 700;
+                                color: #374557;
+                                transition: all 0.4s ease;
+
+                                &.nftmax-wc__form-title__one {
+                                    background-size: 38%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .nftmax-wc__inner {
+                    .nftmax-wc__middle {
+                        img {
+                            max-width: 500px !important;
+                        }
+                    }
+
+                    .nftmax-wc__heading {
+                        .nftmax-wc__title {
+                            font-size: 55px;
+                            line-height: 65px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .nftmax-wc__full {
+        .nftmax-hidden-rp {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1278px) {
+    .body-bg {
+        .nftmax-wc__full {
+            .container-fluid {
+                .nftmax-wc__form {
+                    .nftmax-wc__form-inner {
+                        padding: 30px !important;
+                        min-width: 100% !important;
+                        max-width: 100% !important;
+                        min-height: 100% !important;
+                        max-height: 100%;
+
+                        .nftmax-wc__form-main {
+                            .form-group {
+                                &.nftmax-wc__new-bottom {
+                                    margin-top: 15px;
+                                }
+
+                                .nftmax-wc__button {
+                                    gap: 15px;
+                                }
+                            }
+                        }
+
+                        .nftmax-wc__heading {
+                            .nftmax-wc__form-title {
+                                font-size: 35px;
+                                line-height: 45px;
+                                font-weight: 700;
+                                margin: 0;
+                                padding-bottom: 15px;
+                                margin-bottom: 10px;
+                                line-height: 170%;
+
+                                &.nftmax-wc__form-title__one {
+                                    background-size: 38%;
+                                }
+
+                                &.nftmax-wc__form-title__two {
+                                    background-size: 70%;
+                                }
+
+                                &.nftmax-wc__form-title__three {
+                                    background-size: 88%;
+                                }
+
+                                &.nftmax-wc__form-title__four {
+                                    background-size: 75%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .nftmax-wc__inner {
+                    padding: 30px;
+
+                    .nftmax-wc__middle {
+                        img {
+                            max-width: 300px;
+                        }
+                    }
+
+                    .nftmax-wc__logo {
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .body-bg {
+        .nftmax-wc__full {
+            .container-fluid {
+                .nftmax-wc__form {
+                    .nftmax-wc__form-inner {
+                        padding: 30px !important;
+                        min-width: 100% !important;
+                        max-width: 100% !important;
+                        min-height: 100% !important;
+                        max-height: 100%;
+
+                        .nftmax-wc__heading {
+                            .nftmax-wc__form-title {
+                                margin: 0;
+                                padding-bottom: 10px;
+                                margin-bottom: 5px;
+                                font-size: 2.25rem !important;
+
+                                &.nftmax-wc__form-title__one {
+                                    background-size: 42%;
+                                }
+
+                                &.nftmax-wc__form-title__two {
+                                    background-size: 70%;
+                                }
+
+                                &.nftmax-wc__form-title__three {
+                                    background-size: 70%;
+                                }
+
+                                &.nftmax-wc__form-title__four {
+                                    background-size: 70%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

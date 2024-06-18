@@ -1,0 +1,133 @@
+.nftmax-gap-30 {
+    --bs-gutter-x: 30px;
+}
+
+button {
+    &:disabled {
+        cursor: no-drop;
+    }
+}
+
+.nftmax-svg-icon {
+    width: 18px;
+    height: 15px;
+    fill: #fff;
+}
+
+.mg-top-40 {
+    margin-top: 40px;
+}
+
+.nftmax-history {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0.75rem;
+}
+
+.nftmax-history__content {
+    margin: 0;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nftmax-history__text {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.nftmax-history__number {
+    margin: 0;
+    color: #374557;
+    font-size: 26px;
+    transition: all 0.4s ease;
+    line-height: 22px;
+}
+
+.nftmax-history__text {
+    margin: 0;
+    margin-top: 5px;
+    color: #878F9A;
+    line-height: 28px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 14px;
+}
+
+.charts-main {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 9px 95px rgba(0, 0, 0, 0.05);
+}
+
+.nftmax-sixth-form {
+    display: flex;
+
+    label {
+        margin-left: 5px;
+    }
+}
+
+.nftmax__item-button--single {
+    padding: 11px 22px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3 linear;
+    transition: all 0.3 linear;
+    border-radius: 3px;
+    border: none;
+    position: relative;
+    background: linear-gradient(134.38deg, #F539F8 0%, #C342F9 43.55%, #5356FB 104.51%);
+    font-size: 16px;
+    color: #fff;
+    border-radius: 50px;
+    width: 17%;
+}
+
+.nftmax-header__form-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .input-text {
+        width: 83%;
+        padding: 0;
+
+        input {
+            border: 1px solid #37455717;
+            color: #666;
+            height: 48px;
+            line-height: 48px;
+            width: 96%;
+            padding: 0 30px !important;
+            border-radius: 30px !important;
+            background: #FAFAFA;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nftmax-header__form-inner {
+        flex-direction: column;
+
+        .input-text {
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        .nftmax__item-button--single {
+            margin-top: 25px;
+            width: 100%;
+        }
+    }
+}

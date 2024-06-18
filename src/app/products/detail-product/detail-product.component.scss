@@ -1,0 +1,393 @@
+.dashboard-banner {
+    padding: 32px;
+    border-radius: 16px;
+    min-height: 444px;
+}
+
+.dashboard-banner__single-slider img {
+    border-radius: 16px;
+}
+
+.dashboard-banner__title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 0;
+    letter-spacing: .025em;
+}
+
+// .title-list-details {
+//     padding-top: 20px;
+// }
+
+.dashboard-banner__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: initial;
+    gap: 12px;
+}
+
+.benefits-container {
+    list-style-type: square;
+    padding-top: 14px;
+    padding-left: 45px;
+}
+
+.dashboard-banner__text {
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: .025em;
+}
+
+.dashboard-banner__active-bids .dashboard-banner__column.dashboard-banner__column--two {
+    min-width: 540px;
+    width: 540px;
+    margin: 0;
+}
+
+.dashboard-banner__bid {
+    display: flex;
+    border: 1px solid #d2d3d3;
+    border-radius: 15px;
+    color: #fff;
+    justify-content: space-evenly;
+    position: relative;
+    padding: 16px;
+    height: 8rem;
+    justify-content: space-evenly;
+}
+
+.dashboard-banner__group-small {
+    color: #fff;
+    line-height: 18px;
+    margin: 0;
+    letter-spacing: .025em;
+}
+
+.dashboard-banner__group-title {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: .025em;
+}
+
+.dashboard-banner__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dashboard-banner__group-small {
+    color: #374557;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.dashboard-banner__middle-border {
+    background-color: #7B7EFC;
+    width: 1px;
+    height: 100%;
+}
+
+.dashboard-banner__button {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.dashboard-banner__main-btn .nftmax-btn.nftmax-btn__secondary {
+    padding: 10px 21px;
+}
+
+.dashboard-banner__heart {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    background: #fff;
+    border-radius: 100%;
+    font-size: 25px;
+    color: #374557;
+}
+
+.dashboard-banner__heart:hover {
+    color: #F539F8;
+}
+
+.dashboard-banner__single-btn .nftmax-btn {
+    padding: 9px 23px;
+    font-size: 14px;
+    border-radius: 50px;
+    background: #F539F8;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3 linear;
+    transition: all 0.3 linear;
+    border: none;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+
+    &.trs-white {
+        color: #374557;
+        padding: 0;
+        background: transparent !important;
+        border-bottom: 1px solid;
+        padding: 0;
+        border-radius: 0px;
+        line-height: initial;
+    }
+}
+
+.dashboard-banner__group-small.nftmax-timing {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard-banner__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-banner__content {
+    padding-bottom: 14px;
+}
+
+.dashboard-banner__column.dashboard-banner__column--two {
+    min-width: 600px;
+    width: 600px;
+    margin-left: 56px;
+}
+
+.dashboard-banner__active-bids .dashboard-banner__title,
+.dashboard-banner__active-bids .nftmax-header__author-title,
+.dashboard-banner__active-bids .dashboard-banner__group-title {
+    color: #374557;
+}
+
+.dashboard-banner__title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 0;
+    letter-spacing: .025em;
+}
+
+.dashboard-banner__main .dashboard-banner__slider {
+    position: relative;
+    top: 10px;
+}
+
+.dashboard-banner__column.dashboard-banner__column--one {
+    flex: 1 1;
+    max-width: 390px;
+}
+
+.nftmax-adashboard.nftmax-close .dashboard-banner__column.dashboard-banner__column--one {
+    max-width: initial;
+}
+
+@media only screen and (min-width: 2000px) and (max-width: 8000px) {
+    .dashboard-banner__column.dashboard-banner__column--one {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1279px) and (max-width: 1550px) {
+    .dashboard-banner {
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    .dashboard-banner__title {
+        font-size: 25px;
+    }
+
+    .dashboard-banner__group-title {
+        font-size: 22px;
+    }
+
+    .dashboard-banner__button {
+        margin-top: 15px;
+    }
+
+    .dashboard-banner__heart {
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+    }
+
+    .welcome-cta {
+        padding: 30px;
+    }
+
+    .dashboard-banner__column.dashboard-banner__column--two {
+        min-width: 500px;
+        width: 500px;
+        margin-left: 40px;
+    }
+
+    .nftmax-sidebar__charts {
+        display: flex;
+        align-items: center;
+    }
+
+    .nftmax-sidebar__cstatics {
+        margin: 0;
+    }
+
+    .nftmax-sidebar__charts--v1 .nftmax-sidebar__cside-one {
+        min-width: 50%;
+        width: 50%;
+    }
+
+    .nftmax-sidebar__charts.nftmax-sidebar__charts--v1 {
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .dashboard-banner__active-bids .dashboard-banner__column.dashboard-banner__column--two {
+        width: 100%;
+        min-width: 100%;
+
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1278px) {
+    .nftmax-header__author.nftmax-header__author-two {
+        margin-bottom: 15px;
+    }
+
+    .dashboard-banner__slider {
+        margin-bottom: 30px;
+    }
+
+    .dashboard-banner__button {
+        margin-top: 20px;
+    }
+
+    .dashboard-banner__active-bids .dashboard-banner__column--one {
+        margin-left: 15px;
+    }
+
+    .nftmax-sidebar__charts--v1 .nftmax-sidebar__cside-one {
+        min-width: 50%;
+        width: 50%;
+    }
+
+    .nftmax-sidebar__cstatics {
+        margin: 0;
+    }
+
+    .nftmax-sidebar__charts.nftmax-sidebar__charts--v1 {
+        gap: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dashboard-banner__active-bids .dashboard-banner__column.dashboard-banner__column--two img {
+        height: 400px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1278px) {
+    .dashboard-banner__bids {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dashboard-banner .dashboard-banner__bid {
+        min-width: 375px;
+    }
+
+    .order-top {
+        order: -1;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1278px) {
+    .dashboard-banner {
+        padding: 20px;
+    }
+
+    .dashboard-banner .dashboard-banner__bid {
+        min-width: initial;
+        width: 100%;
+    }
+
+    .dashboard-banner__group-title {
+        font-size: 22px;
+    }
+
+    .dashboard-banner__main {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dashboard-banner__column.dashboard-banner__column--two {
+        margin: 0;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .dashboard-banner__column.dashboard-banner__column--one {
+        flex: initial;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+@media only screen and (min-width: 1020px) and (max-width: 1278px) {
+    .dashboard-banner__main {
+        flex-direction: row-reverse;
+        align-items: start;
+    }
+
+    .dashboard-banner__column.dashboard-banner__column--one {
+        max-width: 40%;
+        width: 40%;
+        min-width: 40%;
+    }
+
+    .dashboard-banner__column.dashboard-banner__column--two {
+        width: 45%;
+        min-width: 45%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .dashboard-banner__bids {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .dashboard-banner__button {
+        gap: 15px;
+    }
+}
+
+.dashboard-banner__active-bids {
+    padding: 0;
+}
+
+
+@media only screen and (min-width: 1279px) and (max-width: 1550px) {
+    .nftmax-btn {
+        a {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<section *ngIf="product != {}" class="nftmax-detail-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-12 nftmax-main__column">
+                <div class="nftmax-body">
+                    <!-- Dashboard Inner -->
+                    <div class="nftmax-dsinner">
+                        <!-- Dashboard Slider -->
+                        <div class="dashboard-banner dashboard-banner__active-bids  mg-top-40">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="dashboard-banner__main">
+                                        <div class="dashboard-banner__column dashboard-banner__column--one">
+                                            <!-- Dashboard Content -->
+                                            <div class="dashboard-banner__content">
+                                                <h2 class="dashboard-banner__title title-list-details">{{product?.name}}
+                                                </h2>
+                                                <p class="m-0">{{product?.download_package?.name}}</p>
+                                            </div>
+                                            <div class="dashboard-banner__bids">
+                                                <div class="dashboard-banner__bid">
+                                                    <!-- Single Bid -->
+                                                    <div class="dashboard-banner__group">
+                                                        <p class="dashboard-banner__group-small">Giá</p>
+                                                        <h3 class="dashboard-banner__group-title">
+                                                            {{formatNumberWithCommas(product?.price)}}đ</h3>
+
+                                                    </div>
+                                                    <!-- End Single Bid -->
+                                                    <div class="dashboard-banner__middle-border"></div>
+                                                    <!-- Single Bid -->
+                                                    <div class="dashboard-banner__group">
+                                                        <p class="dashboard-banner__group-small">Lượt tải</p>
+                                                        <h3 class="dashboard-banner__group-title"
+                                                            data-countdown="2023/12/26">{{product?.acceptance_point}}
+                                                        </h3>
+                                                    </div>
+                                                    <!-- End Single Bid -->
+                                                </div>
+                                            </div>
+
+                                            <!-- Dashboard Banner Button -->
+                                            <div class="dashboard-banner__button">
+                                                <div class="dashboard-banner__single-btn">
+                                                    <a class="dashboard-banner__btn"></a><a
+                                                        (click)="clickBuy(product?.id, product?.price)"
+                                                        class="nftmax-btn nftmax-btn__secondary radius">Mua</a>
+                                                </div>
+                                            </div>
+                                            <!-- End Dashboard Banner Button -->
+                                        </div>
+                                        <div class="dashboard-banner__column dashboard-banner__column--two order-top">
+                                            <div class="dashboard-banner__single-slider  order-top">
+                                                <h2 class="dashboard-banner__title title-list-details">Nguồn dữ liệu
+                                                    được phép tải
+                                                </h2>
+
+                                                <ul class="list-group benefits-container">
+                                                    <li *ngFor="let item of product?.download_package?.download_sources"
+                                                        class="list-item">{{item?.name}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Dashboard Slider -->
+                    </div>
+                    <!-- End Dashboard Inner -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

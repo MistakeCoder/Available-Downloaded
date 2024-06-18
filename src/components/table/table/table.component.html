@@ -1,0 +1,101 @@
+<ng-container *ngIf="selection.selected.length">
+  <div class="actions">
+    <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+      [indeterminate]="selection.hasValue() && !isAllSelected()">
+    </mat-checkbox>
+    <span matBadgeColor="accent" matBadge="{{selection.selected.length}}" matBadgeOverlap="false">Đã chọn</span>
+    <ng-container *ngFor="let action of actions">
+      <div class="button-holder">
+        <ng-container *ngIf="isShowAction(action)">
+          <button class="button is-small action-item action-{{action.name}}" [ngClass]="action?.class"
+            (click)="onActionClick(action.name, action?.params)">
+            <span class="icon" *ngIf="action?.icon">
+              <i class="{{action?.icon}} is-action-{{action.name}}" [style.color]="action?.color"
+                aria-hidden="true"></i>
+            </span>
+            <span>{{action.title}}</span>
+          </button>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+<div class="tab-content" id="myTabContent" style="height: 500px; overflow-y: auto; ">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select" *ngIf="actions.length" sticky>
+      <th class="checkbox-table" mat-header-cell *matHeaderCellDef style="width: 30px; ">
+        <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row" style="width: 30px;">
+        <mat-checkbox (click)=" $event.stopPropagation()" (change)="$event ? actionChecked(row) : null"
+          [checked]="isChecker(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Header STT-->
+    <ng-container *ngIf="currentPage" matColumnDef="stt">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header style="width: 50px;"> STT </th>
+      <td mat-cell *matCellDef="let row; let i = index;" style="width: 50px;">{{ getSTT(i) }}
+      </td>
+    </ng-container>
+
+    <!-- column define -->
+    <ng-container *ngFor="let column of columns" matColumnDef="{{ column.name }}">
+
+      <!-- Header -->
+      <th mat-header-cell *matHeaderCellDef [ngStyle]="makeColumnStyle(column)" mat-sort-header> {{ column.title }}
+      </th>
+
+      <!-- Row -->
+      <td mat-cell *matCellDef="let row" [ngClass]="column.class || ''" [ngStyle]="makeColumnStyle(column)"
+        (click)="onColumnClick(row.id, column.name)">
+        <ng-container *ngIf="!column.hover && !column.tooltip">
+          <span
+            [innerHTML]="isRender(column) ? (column.render(row) | safeHtml) : (limitText(column, row[column.name]) || '--' )"
+            class="td-2-rows" style="-webkit-box-orient: vertical;">
+          </span>
+        </ng-container>
+        <ng-container *ngIf="column.hover && !column.tooltip">
+          <span
+            [innerHTML]="isRender(column) ? (column.render(row) | safeHtml) : (limitText(column, row[column.name]) || '--' )">
+          </span>
+        </ng-container>
+        <ng-container *ngIf="column.tooltip">
+          <button mat-raised-button matTooltip="{{ column.render(row) }}"
+            style="background: transparent;border: none;font-size: 1em;color:#3c3b3b;padding: 0">
+            {{ limitText({limit: 7} ,column.render(row)) }}
+          </button>
+        </ng-container>
+      </td>
+
+    </ng-container>
+
+    <!-- Action col -->
+    <ng-container matColumnDef="table_action">
+      <!-- Action header -->
+      <th mat-header-cell *matHeaderCellDef style="width: 50px; text-align: center; font-weight: bold;"> Thao tác </th>
+
+      <!-- Row -->
+      <td mat-cell *matCellDef="let row" style="width: 50px; text-align: center;">
+        <ng-container *ngFor="let action of getTableActions()">
+          <a class="is-full icon row-action tooltip is-tooltip-left" *ngIf="isShowAction(action, 'row')"
+            (click)="onColumnClick(row.id, action.name)" [attr.data-tooltip]="action.title">
+            <i class="{{action?.icon}} is-action-{{action.name}}" [style.color]="action.color" aria-hidden="true"></i>
+          </a>
+        </ng-container>
+      </td>
+
+    </ng-container>
+
+    <!-- displayedColumns -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+</div>

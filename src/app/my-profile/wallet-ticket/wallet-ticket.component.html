@@ -1,0 +1,29 @@
+<div class="wallet-ticket">
+    <div class="nftmax-table__heading mb-5">
+        <h3 *ngIf="isTrash" class="nftmax-table__title mb-0">
+            Thùng rác
+        </h3>
+        <ul class="nav nav-tabs  nftmax-dropdown__list" id="nav-tab" role="tablist">
+            <li (click)="actionAdd()" class="nav-item create-employee">
+                <i class="fas fa-plus-square"></i>
+                <span>Tạo mới</span>
+            </li>
+
+        </ul>
+    </div>
+    <div class="tab-pane flex-column active" id="table_1" role="tabpanel" aria-labelledby="table_1">
+        <app-table [columns]="columns" [rows]="rows" [actions]="actions" [rowsSelect]="ids" [onTab]="getType"
+            (columnClick)="onColumnClick($event)" (rowChecked)="onRowChecked($event)" (onAction)="onActionClick($event)"
+            [loading]="loading">
+        </app-table>
+        <div class="page-content-overlay" *ngIf="isDataEmpty() && !loading">
+            <h2>Không có dữ liệu</h2>
+        </div>
+
+    </div>
+    <div class="toolbar">
+        <app-paginate [page]="page" [loading]="loading" (pageChange)="pageChange($event)"></app-paginate>
+    </div>
+
+
+    <p-toast></p-toast>

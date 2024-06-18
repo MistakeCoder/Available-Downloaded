@@ -1,0 +1,4 @@
+<span class="paginate-index" *ngIf="page.last">Trang {{(paginator.pageIndex + 1)}} / {{page.last}}</span>
+<mat-paginator #paginator [pageSize]="page.perPage" [length]="page.total" [pageSizeOptions]="pageSizeOptions"
+    [showFirstLastButtons]="true" [pageIndex]="(page.current - 1)" (page)="onPageChange($event)">
+</mat-paginator>

@@ -1,0 +1,113 @@
+<header class="nftmax-header {{isCloseMenu && 'nftmax-close'}}">
+    <div class="container">
+        <div class="row g-50">
+            <div class="col-12">
+                <!-- Dashboard Header -->
+                <div class="nftmax-header__inner">
+                    <div class="nftmax__sicon close-icon d-xl-none close-1200"><img src="assets/img/menu-toggle.svg"
+                            alt="#"></div>
+                    <div class="nftmax-header__left">
+                    </div>
+                    <div class="nftmax-header__right">
+                        <div class="nftmax-header__group">
+                            <!-- Search Form -->
+                            <div class="nftmax-header__amount">
+                                <div class="nftmax-amount__icon"><img src="assets/img/bag-icon.svg" alt="#"></div>
+                                <div class="nftmax-amount__digit">{{rewardPointBalance?.balance}}<span>đ</span></div>
+                                <div class="nftmax-header__plus"><a href="#"><img src="assets/img/plus-icon.svg"
+                                            alt="#"></a></div>
+                                <!-- NFTMax Balance Hover -->
+                                <div class="nftmax-balance">
+                                    <h3 class="nftmax-balance__title">Lịch sử giao dịch</h3>
+                                    <!-- NFTMax Balance List -->
+                                    <ul class="nftmax-balance_list">
+                                        <li *ngFor="let item of historyRewardPoint">
+                                            <div class="nftmax-balance-info">
+                                                <div class="nftmax-balance__img"><img
+                                                        src="https://nftmax.halozend.com/assets/img/wallet-1.png"
+                                                        alt="#"></div>
+                                                <h4 class="nftmax-balance-name">{{item?.content}}</h4>
+                                            </div>
+                                            <div class="nftmax-balance-amount">
+                                                <h4 class="nftmax-balance-amount nftmax-scolor">{{item?.point}}<span
+                                                        class="nftmax-balance-usd"
+                                                        [innerHTML]="convertToVietnameseStatus(item?.status)"></span>
+                                                </h4>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                    <!-- NFTMax Balance Button -->
+                                    <div (click)="navigateTo('setting', 'setting', 'reward-point')"
+                                        class="nftmax-balance__button" data-bs-toggle="modal"
+                                        data-bs-target="#add_wallet"><a
+                                            class="nftmax-btn nftmax-btn__bordered bg radius">Xem thêm</a></div>
+
+                                </div>
+                                <!-- End NFTMax Balance Hover -->
+                            </div>
+                            <!-- End Search Form -->
+                            <div class="nftmax-header__group-two">
+                                <div class="nftmax-header__right">
+                                    <div class="nftmax-header__author">
+                                        <div class="nftmax-header__author-img"><img
+                                                src="https://nftmax.halozend.com/assets/img/profile-pic.png" alt="#">
+                                        </div>
+                                        <div class="nftmax-header__author-content">
+                                            <h4 class="nftmax-header__author-title">{{user?.name}}</h4>
+                                            <p class="nftmax-header__author-text v1">{{user?.email}}</p>
+                                        </div>
+
+                                        <!-- NFTMax Profile Hover -->
+                                        <div class="nftmax-balance nftmax-profile__hover">
+                                            <h3 class="nftmax-balance__title">Hồ sơ cá nhân</h3>
+                                            <!-- NFTMax Balance List -->
+                                            <ul class="nftmax-balance_list">
+                                                <li>
+                                                    <div (click)="navigateTo('my-profile','my-profile')"
+                                                        class="nftmax-balance-info">
+                                                        <div class="nftmax-balance__img nftmax-profile__img-one"><img
+                                                                src="assets/img/profile-1.png" alt="#"></div>
+                                                        <h4 class="nftmax-balance-name"><a>Hồ sơ cá
+                                                                nhân</a></h4>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div (click)="navigateTo('setting','setting','change-password')"
+                                                        class="nftmax-balance-info">
+                                                        <div class="nftmax-balance__img nftmax-profile__img-three"><img
+                                                                src="assets/img/profile-3.png" alt="#"></div>
+                                                        <h4 class="nftmax-balance-name"><a>Đổi mật khẩu</a>
+                                                        </h4>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div (click)="navigateTo('setting','setting','personal-info')"
+                                                        class="nftmax-balance-info">
+                                                        <div class="nftmax-balance__img nftmax-profile__img-four"><img
+                                                                src="assets/img/profile-4.png" alt="#"></div>
+                                                        <h4 class="nftmax-balance-name"><a>Cài đặt</a>
+                                                        </h4>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div (click)="logout()" class="nftmax-balance-info">
+                                                        <div class="nftmax-balance__img nftmax-profile__img-five"><img
+                                                                src="assets/img/profile-5.png" alt="#"></div>
+                                                        <h4 class="nftmax-balance-name"><a>Đăng
+                                                                xuất</a></h4>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- End NFTMax Balance Hover -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

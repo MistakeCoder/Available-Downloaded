@@ -1,0 +1,39 @@
+<div class="modal-promotion" style=" position: relative; height: 70vh; overflow: hidden;">
+    <div (click)="close()" class="close-modal d-flex justify-content-end"
+        style="position: sticky; top: 10px; right: 15px; padding-right: 13px;">
+        <img src="../../../assets/img/close-promotion-popup.svg" alt=""
+            style="width: 28px; height: 25px; cursor: pointer;">
+    </div>
+    <div class="modal-promotion-wrapper" style="overflow: hidden; padding: 20px 24px;">
+        <div class="heading-promotion d-flex align-items-center justify-content-center overflow-hidden">
+            <div class="icon-left flex-1" style="width: 140px; height: 160px;">
+                <img src="../../../assets/img/gift.svg" alt="">
+            </div>
+            <h1 class="title-promotion text-center fw-bold" style="color: #6610f2; font-size: 32px;">
+                Khuyến mãi
+            </h1>
+        </div>
+        <div class="content-promotion d-flex flex-column gap-3"
+            style="overflow-y: auto; overflow-x: hidden; height: 400px;">
+            <div *ngFor="let item of availablePromotion" class="content-item d-flex"
+                style="background: #fff; border: none; outline: none; border-radius: 12px; padding: 12px;">
+                <div class="heading d-flex flex-column">
+                    <h3 class="title-promotion" style="font-weight: bold;">
+                        {{ item?.name }}
+                    </h3>
+                    <p class="time-promotion {{!isShowPromotion && 'm-0'}}" style="font-size: 16px; color: #495057;">
+                        Thời hạn:
+                        {{ item?.is_expire ? formattedDate(item?.start_date) + ' đến ' + formattedDate(item?.end_date) :
+                        'Không thời hạn' }}
+                    </p>
+                    <p *ngIf="isShowPromotion" class="time-promotion"
+                        style="font-size: 16px; color: #495057; margin: 0;">
+                        Khuyến mãi:
+                        {{displayPromotionString(item?.percent, item?.money)}};
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

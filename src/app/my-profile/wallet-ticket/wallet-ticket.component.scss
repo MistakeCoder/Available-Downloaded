@@ -1,0 +1,513 @@
+.wallet-ticket {
+    background: #fff;
+    padding: 30px;
+    margin: 30px 0 0 0;
+    border-radius: 15px;
+    box-shadow: 0px 9px 95px rgba(0, 0, 0, 0.05);
+
+    .nftmax-table__heading {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+}
+
+.nftmax-table__main-v1 .nftmax-table__head tr th,
+.nftmax-table__main-v1 .nftmax-table__body tr td {
+    padding-bottom: 15px;
+    width: 11%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nav-tabs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.input-search-employee {
+    position: relative;
+    cursor: pointer;
+
+    i {
+        position: absolute;
+        right: 5%;
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: red;
+
+        &.fa-spinner {
+            top: 33%;
+            transform: translateY(0);
+            animation: spinner 3s linear infinite;
+        }
+    }
+}
+
+.search-input {
+    min-width: 350px;
+    height: 43px;
+    font-size: 1rem;
+    color: #495057;
+    background: #ffffff;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    border-radius: 6px;
+}
+
+.nftmax-table {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 9px 95px rgba(0, 0, 0, 0.05);
+}
+
+.search-employee {
+    background: #e3e4fe;
+    padding: 8px 12px;
+    height: 43px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    transition: all .3s linear;
+
+    span {
+        font-weight: 600;
+        font-size: 16px;
+        color: #5356fb;
+    }
+
+    i {
+        font-size: 20px;
+        color: #5356fb;
+    }
+
+    &:hover {
+        background: #c4c6f5;
+    }
+}
+
+.create-employee {
+    background: #def9e9;
+    padding: 8px 12px;
+    height: 43px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    transition: all .3s linear;
+
+    span {
+        font-weight: bold;
+        font-size: 16px;
+        color: #27ae60;
+    }
+
+    i {
+        font-size: 24px;
+        color: #27ae60;
+    }
+
+    &:hover {
+        background: #c9f9dc;
+    }
+}
+
+.view-employee {
+    background: #def9e9;
+    height: 43px;
+    width: 43px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    transition: all .3s linear;
+
+    i {
+        font-size: 22px;
+        color: #27ae60;
+    }
+
+    &:hover {
+        background: #c9f9dc;
+    }
+}
+
+.trash-employee {
+    background: #ffdbd7;
+    height: 43px;
+    width: 43px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    transition: all .3s linear;
+}
+
+.nftmax-table__badge {
+    min-width: 28px;
+    min-height: 28px;
+    display: inline-block;
+    background: #f539f8;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.previous-bookeeping {
+    color: #5356fb;
+    cursor: pointer;
+}
+
+.nftmax-table__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 35px;
+    letter-spacing: 0.025em;
+
+}
+
+.nftmax-table__head tr th,
+.nftmax-table__body tr td {
+    padding-bottom: 15px;
+    width: 14%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nftmax-table__body tr td {
+    padding: 20px 0;
+}
+
+.nftmax-sidebar_btn.nftmax-heading__tabs {
+    padding: 0;
+    border: none;
+    color: #878f9a !important;
+}
+
+.nftmax-table__arrow--icon {
+    padding-left: 10px;
+}
+
+.nftmax-table__head {
+    border-bottom: 1px solid rgba(83, 86, 251, 0.16);
+}
+
+.nftmax-table__body tr {
+    padding-top: 20px;
+    width: 100%;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nftmax-table__body tr:last-child {
+    border-bottom: 0px;
+}
+
+.nftmax-table__body tr:hover {
+    background: #f9fafb;
+}
+
+.nftmax-table__product {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-align: left;
+}
+
+.nftmax-table__product-img {
+    max-width: 60px;
+}
+
+.nftmax-table__product-img img {
+    border-radius: 50%;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.nftmax-table__product-title {
+    margin: 0;
+    color: #374557;
+}
+
+.nftmax-table__product-desc {
+    margin: 0;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: initial;
+}
+
+.nftmax-table__time {
+    color: #878f9a;
+    margin: 0;
+}
+
+.nftmax-table__main-v1 .nftmax-table__head tr th,
+.nftmax-table__main-v1 .nftmax-table__body tr td {
+    padding-bottom: 15px;
+    width: 11%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.nftmax-table__main-v1 .nftmax-table__column-1 {
+    text-align: left !important;
+}
+
+.nftmax-table__amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.nftmax-table__amount img {
+    max-width: 18px;
+    height: auto;
+}
+
+.nftmax-table {}
+
+.nftmax-table__text {
+    margin: 0;
+    font-size: 16px;
+}
+
+.nftmax-table__bid-text {
+    color: #374557;
+}
+
+.nftmax-table__status {
+    font-size: 14px;
+    color: #fff;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    padding: 2px 8px;
+}
+
+.nftmax-table__status {
+    display: inline flow-root list-item;
+}
+
+.nftmax-table__column-7 {
+    text-align: right !important;
+}
+
+.nftmax-table__head tr th {
+    color: #878f9a;
+    font-weight: 500;
+}
+
+.nftmax-table__main table tbody a {
+    font-weight: 400;
+}
+
+.nftmax-table__main {
+    margin: 0;
+}
+
+
+.nftmax-table__main-sell .nftmax-table__column-1,
+.nftmax-table__main-sell tr th,
+.nftmax-table__main-sell tr td {
+    text-align: left;
+}
+
+.nftmax-table__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.nftmax-dropdown__list .nav-link:after {
+    display: none;
+}
+
+.nftmax-dropdown__list {
+    border: none !important;
+}
+
+.nftmax-dropdown__list .nav-link {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.nftmax-table__heading .nftmax-dropdown__list .nav-link {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.nftmax-table__product-history .nftmax-table__column-1 .nftmax-table__text {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.nftmax-table__product-history .nftmax-table__column-1 {
+    width: 6%;
+}
+
+.nftmax-table__product-history .nftmax-table__product-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.nftmax-table__product-history .nftmax-table__column-2 {
+    width: 18%;
+}
+
+.nftmax-table__product-history .nftmax-table__column-3 {
+    width: 42%;
+}
+
+.nftmax-table__product-history .nftmax-table__column-4,
+.nftmax-table__product-history .nftmax-table__column-5,
+.nftmax-table__product-history .nftmax-table__column-6,
+.nftmax-table__product-history .nftmax-table__column-7 {
+    width: 8%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1278px) {
+    .nftmax-table__product {
+        flex-direction: column;
+        align-items: first baseline;
+        gap: 6px;
+    }
+
+    .nftmax-table__product-title {
+        font-size: 16px;
+    }
+
+    .nftmax-table__body tr td {
+        padding: 10px 0;
+    }
+
+    .nftmax-table__amount {
+        flex-direction: column;
+    }
+
+    .nftmax-table__product-img {
+        max-width: 46px;
+    }
+
+    .nftmax-table__product-desc {
+        line-height: 22px;
+        margin: 0;
+    }
+
+    .nftmax-table__status {
+        font-size: 12px;
+        padding: 2px 8px;
+    }
+
+    .nftmax-table__text {
+        margin: 0;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .nftmax-table #myTabContent {
+        overflow-x: auto;
+    }
+
+    .nftmax-table__product-img img {
+        min-width: 46px;
+        min-height: 46px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nftmax-table__product {
+        flex-direction: column;
+        align-items: first baseline;
+    }
+
+    .nftmax-table__product {
+        flex-direction: column;
+        align-items: first baseline;
+        gap: 6px;
+    }
+
+    .nftmax-table__product-title {
+        font-size: 16px;
+    }
+
+    .nftmax-table__body tr td {
+        padding: 10px 0;
+    }
+
+    .nftmax-table__amount {
+        flex-direction: column;
+    }
+
+    .nftmax-table__product-img {
+        max-width: 46px;
+    }
+
+    .nftmax-table__product-desc {
+        line-height: 22px;
+        margin: 0;
+    }
+
+    .nftmax-table__status {
+        font-size: 12px;
+        padding: 2px 8px;
+    }
+
+    .nftmax-table__text {
+        margin: 0;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .nftmax-table.mg-top-30 {
+        width: 100%;
+        overflow: scroll;
+    }
+
+    #nftmax-table__main {
+        width: 690px;
+    }
+
+    .nftmax-table #myTabContent {
+        overflow-x: auto;
+    }
+
+    .nftmax-table__product-img img {
+        min-width: 46px;
+        min-height: 46px;
+    }
+}
+
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,67 @@
+<form [formGroup]="form" class="">
+    <mat-dialog-content>
+
+        <div class="is-full" style="padding: 0 0 30px;">
+            <span class="p-float-label">
+                <p-autoComplete formControlName="selectedBanks" [dropdown]="true" [suggestions]="filteredBanks"
+                    (completeMethod)="filterBanks($event)" (onSelect)="onBankSelect($event)"
+                    field="name"></p-autoComplete>
+                <label for="float-input">Tên ngân hàng</label>
+            </span>
+        </div>
+
+        <div class="is-full" style="padding: 0 0 30px;">
+            <span class="p-float-label">
+                <input pInputText id="name" formControlName="beneficiary_account" />
+                <label for="float-input">Số tài khoản</label>
+            </span>
+        </div>
+
+        <div class="is-full" style="padding: 0 0 30px;">
+            <span class="p-float-label">
+                <input pInputText id="name" formControlName="beneficiary" />
+                <label for="float-input">Người thụ hưởng</label>
+            </span>
+        </div>
+
+        <div class="card flex justify-content-center" style="margin: 0 0 30px;">
+            <p-fieldset legend="Chọn loại tài khoản">
+                <mat-radio-group formControlName="selectedType">
+                    <mat-radio-button (change)="onTypeCheckbox($event)" [checked]="istypeBank" value="bank">Ngân
+                        hàng</mat-radio-button>
+                    <mat-radio-button (change)="onTypeCheckbox($event)" [checked]="istypeCard"
+                        value="card">Thẻ</mat-radio-button>
+                </mat-radio-group>
+            </p-fieldset>
+        </div>
+
+        <div class="is-full" style="padding: 0 0 30px; display: flex; align-items: center; gap: 8px;">
+            <mat-checkbox formControlName="is_default" id="is_default"></mat-checkbox>
+            <label for="is_default">Mặc định</label>
+        </div>
+    </mat-dialog-content>
+
+    <div class="nftmax__item-button--group nftmax__ptabs-bottom">
+        <span (click)="backTo()" *ngIf="isTypeEdit" class="nftmax__item-button--single nftmax__item-button--back"><i
+                style="padding-right: 8px;" class="fas fa-arrow-left"></i>Trở
+            lại</span>
+        <span (click)="removePaymentMethod()" *ngIf="!isTypeEdit"
+            class="nftmax__item-button--single nftmax__item-button--back"><i style="padding-right: 8px;"
+                class="fas fa-arrow-left"></i>Trở
+            lại</span>
+
+        <div class="right d-flex align-items-center gap-4">
+            <button *ngIf="isTypeEdit" (click)="removePaymentMethod('remove')"
+                class="nftmax__item-button--single nftmax__item-button--cancel">Xoá tài
+                khoản</button>
+
+            <button [disabled]="form.invalid" (click)="onSubmit()"
+                class="nftmax__item-button--single nftmax-btn nftmax-btn__bordered bg radius" type="submit">Lưu thông
+                tin</button>
+        </div>
+
+    </div>
+
+</form>
+
+<p-toast></p-toast>

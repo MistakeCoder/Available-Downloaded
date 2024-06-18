@@ -1,0 +1,27 @@
+.modal-page {
+    padding: 20px 0;
+
+    .bar-title {
+        text-align: center;
+        font-weight: 700;
+        line-height: 140%;
+        color: #374557;
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .is-full {
+        span {
+            display: flex;
+            flex-direction: column-reverse;
+
+        }
+    }
+
+    .mat-mdc-dialog-actions {
+        justify-content: flex-end !important;
+    }
+
+
+
+}

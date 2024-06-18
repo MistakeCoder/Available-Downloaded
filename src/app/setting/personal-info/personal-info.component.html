@@ -1,0 +1,55 @@
+<div class="tab-pane fade show active" id="id1" role="tabpanel">
+    <form action="#">
+        <div class="row">
+            <div class="col-12">
+                <div class="nftmax-ptabs__separate">
+                    <form class="nftmax-ptabs__form-main" [formGroup]="formPersonalInfo">
+
+                        <div class="is-full">
+                            <label for="float-input">Mã</label>
+                            <input pInputText id="float-input" formControlName="code" type="text" />
+                        </div>
+
+                        <div class="is-full">
+                            <label for="float-input">Tên</label>
+                            <input pInputText id="float-input" formControlName="name" type="text" />
+
+
+                        </div>
+
+                        <div class="is-full">
+                            <label for="float-input">Email</label>
+                            <input pInputText id="float-input" formControlName="email" type="text" />
+                        </div>
+
+
+                        <div class="is-full">
+                            <label for="float-input">Số điện thoại</label>
+                            <input pInputText id="float-input" formControlName="phone" type="text" />
+                        </div>
+
+                        <div class="nftmax__item-form--group">
+                            <label class="nftmax__item-label">Chia sẻ đường dẫn giới thiệu
+                            </label>
+                            <div class="input-group">
+                                <input class="nftmax__item-input" type="url" formControlName="referral_link">
+                                <i (click)="copyToClipboard()" class="fas fa-copy"></i>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="nftmax__item-button--group nftmax__ptabs-bottom d-flex justify-content-center">
+            <button [disabled]="formPersonalInfo.invalid" (click)="updatePersonalInfo()"
+                class="nftmax__item-button--single nftmax-btn nftmax-btn__bordered bg radius" type="submit">Cập nhật
+                thông tin</button>
+        </div>
+    </form>
+</div>
+
+<p-toast></p-toast>
